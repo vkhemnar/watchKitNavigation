@@ -1,15 +1,75 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yi5-7Q-YYJ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
-        <scene sceneID="aou-V4-d1y">
+        <!--Done-->
+        <scene sceneID="lky-mU-a9a">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchKitNavigation_WatchKit_App" customModuleProvider="target"/>
+                <controller identifier="CarView" title="Done" hidesWhenLoading="NO" id="AHd-5p-kbq" customClass="CarController" customModule="WatchKitNavigation_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="oHp-jy-qSH">
+                            <items>
+                                <imageView alignment="center" verticalAlignment="center" id="QBw-Uc-pA4"/>
+                            </items>
+                        </group>
+                        <label alignment="center" verticalAlignment="bottom" text="carName" id="EJY-g6-x4j"/>
+                    </items>
+                    <connections>
+                        <outlet property="carImage" destination="QBw-Uc-pA4" id="2ph-FQ-hrW"/>
+                        <outlet property="carName" destination="EJY-g6-x4j" id="lKW-Hg-cSc"/>
+                    </connections>
+                </controller>
             </objects>
+            <point key="canvasLocation" x="312" y="102"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="sex-Df-qE6">
+            <objects>
+                <controller id="yi5-7Q-YYJ" customClass="InterfaceController" customModule="WatchKitNavigation_WatchKit_Extension">
+                    <items>
+                        <imageView width="50" height="50" alignment="center" id="zuN-fl-OPi"/>
+                        <label alignment="left" text="Audi" id="fNi-ZM-nLp"/>
+                        <button width="1" alignment="left" title="Change Car" id="cMz-0T-zPI">
+                            <connections>
+                                <action selector="changeCar" destination="yi5-7Q-YYJ" id="s7J-Dp-R5I"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Detail" id="Ry7-dA-mKl">
+                            <connections>
+                                <segue destination="4EO-0g-nCs" kind="push" id="MjS-kw-Ee0"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="carImage" destination="zuN-fl-OPi" id="at2-fh-Nbm"/>
+                        <outlet property="label" destination="fNi-ZM-nLp" id="NcC-JI-A7Z"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="306" y="470"/>
+        </scene>
+        <!--Detail Controller-->
+        <scene sceneID="Bfn-oE-5WU">
+            <objects>
+                <controller hidesWhenLoading="NO" id="4EO-0g-nCs" customClass="DetailController" customModule="WatchKitNavigation_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="carName" textAlignment="center" numberOfLines="0" id="xuV-u0-vb6"/>
+                        <imageView height="10" alignment="left" id="SQl-VI-5Vd"/>
+                        <label alignment="left" text="description" numberOfLines="0" id="l96-Lt-Thn"/>
+                        <imageView height="5" alignment="left" id="vOu-XK-HIf"/>
+                        <label alignment="left" text="competitor" numberOfLines="0" id="sNb-dN-QqX"/>
+                    </items>
+                    <connections>
+                        <outlet property="carCompetition" destination="sNb-dN-QqX" id="Kyf-ZS-OPg"/>
+                        <outlet property="carDescription" destination="l96-Lt-Thn" id="IP0-bx-mpK"/>
+                        <outlet property="carName" destination="xuV-u0-vb6" id="zgY-eO-xGj"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="574" y="470"/>
         </scene>
     </scenes>
 </document>

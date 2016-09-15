@@ -19,6 +19,10 @@
 		AACA5D971D867B7000DCCE91 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACA5D961D867B7000DCCE91 /* InterfaceController.swift */; };
 		AACA5D991D867B7000DCCE91 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACA5D981D867B7000DCCE91 /* ExtensionDelegate.swift */; };
 		AACA5D9B1D867B7000DCCE91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AACA5D9A1D867B7000DCCE91 /* Assets.xcassets */; };
+		AACA5DAB1D867EB300DCCE91 /* CarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACA5DAA1D867EB300DCCE91 /* CarManager.swift */; };
+		AACA5DAD1D867ECA00DCCE91 /* CarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACA5DAA1D867EB300DCCE91 /* CarManager.swift */; };
+		AACA5DAF1D867F1A00DCCE91 /* CarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACA5DAE1D867F1A00DCCE91 /* CarController.swift */; };
+		AACA5DB11D867F3A00DCCE91 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACA5DB01D867F3A00DCCE91 /* DetailController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +84,9 @@
 		AACA5D981D867B7000DCCE91 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		AACA5D9A1D867B7000DCCE91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AACA5D9C1D867B7000DCCE91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AACA5DAA1D867EB300DCCE91 /* CarManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarManager.swift; sourceTree = "<group>"; };
+		AACA5DAE1D867F1A00DCCE91 /* CarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarController.swift; sourceTree = "<group>"; };
+		AACA5DB01D867F3A00DCCE91 /* DetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +110,7 @@
 		AACA5D671D867B7000DCCE91 = {
 			isa = PBXGroup;
 			children = (
+				AACA5DAC1D867EC200DCCE91 /* ColorPickerKit */,
 				AACA5D721D867B7000DCCE91 /* WatchKitNavigation */,
 				AACA5D861D867B7000DCCE91 /* WatchKitNavigation WatchKit App */,
 				AACA5D951D867B7000DCCE91 /* WatchKitNavigation WatchKit Extension */,
@@ -148,10 +156,20 @@
 			children = (
 				AACA5D961D867B7000DCCE91 /* InterfaceController.swift */,
 				AACA5D981D867B7000DCCE91 /* ExtensionDelegate.swift */,
+				AACA5DAE1D867F1A00DCCE91 /* CarController.swift */,
+				AACA5DB01D867F3A00DCCE91 /* DetailController.swift */,
 				AACA5D9A1D867B7000DCCE91 /* Assets.xcassets */,
 				AACA5D9C1D867B7000DCCE91 /* Info.plist */,
 			);
 			path = "WatchKitNavigation WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		AACA5DAC1D867EC200DCCE91 /* ColorPickerKit */ = {
+			isa = PBXGroup;
+			children = (
+				AACA5DAA1D867EB300DCCE91 /* CarManager.swift */,
+			);
+			name = ColorPickerKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AACA5DAB1D867EB300DCCE91 /* CarManager.swift in Sources */,
 				AACA5D761D867B7000DCCE91 /* ViewController.swift in Sources */,
 				AACA5D741D867B7000DCCE91 /* AppDelegate.swift in Sources */,
 			);
@@ -295,8 +314,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AACA5DAD1D867ECA00DCCE91 /* CarManager.swift in Sources */,
 				AACA5D991D867B7000DCCE91 /* ExtensionDelegate.swift in Sources */,
 				AACA5D971D867B7000DCCE91 /* InterfaceController.swift in Sources */,
+				AACA5DB11D867F3A00DCCE91 /* DetailController.swift in Sources */,
+				AACA5DAF1D867F1A00DCCE91 /* CarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,6 +549,7 @@
 				AACA5DA11D867B7000DCCE91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AACA5DA31D867B7000DCCE91 /* Build configuration list for PBXNativeTarget "WatchKitNavigation WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -535,6 +558,7 @@
 				AACA5DA51D867B7000DCCE91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AACA5DA71D867B7000DCCE91 /* Build configuration list for PBXNativeTarget "WatchKitNavigation" */ = {
 			isa = XCConfigurationList;
@@ -543,6 +567,7 @@
 				AACA5DA91D867B7000DCCE91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

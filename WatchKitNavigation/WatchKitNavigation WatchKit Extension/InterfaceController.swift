@@ -12,20 +12,30 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
-        
-        // Configure interface objects here.
+    @IBOutlet var carImage: WKInterfaceImage!
+    @IBOutlet var label: WKInterfaceLabel!
+    
+    @IBAction func changeCar()
+    {
+        let carList = [0,1,2,3,4]
+        let names: [String] = carList.map { c in "CarView" }
+        presentControllerWithNames(names, contexts: carList)
     }
-
+    
     override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-    }
-
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
+        if let selectedCar = CarManager.selectedCar
+        {
+            carImage.setImageNamed(selectedCar.getCarName())
+            label.setText(selectedCar.getCarName())
+        }
+        else
+        {
+            let car = Car.getRandomCar()
+            carImage.setImageNamed(car.getCarName())
+            label.setText(car.getCarName())
+            CarManager.selectedCar = car
+        }
     }
 
 }
